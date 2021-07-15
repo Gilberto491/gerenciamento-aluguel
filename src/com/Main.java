@@ -15,14 +15,14 @@ public class Main {
         Imovel imovel = new Imovel(false, 20.000, "021");
         Pessoa pessoa = new Pessoa("Rodrigo", "032", "(51)985328500");
 
-        //Sets
+        //Sets.
 
         Anuncio anuncio = new Anuncio(1.000, LocalDate.of(2021, 12, 4));
         anuncio.setLocatario(pessoa);
         anuncio.setImovel(imovel);
         anuncio.setCorretor(corretor);
 
-        //Result
+        //Result.
 
         System.out.println(anuncio.getValor());
         System.out.println(anuncio.getData());
