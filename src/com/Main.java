@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         Corretor anderson = new Corretor("Anderson", "012", "(51)983754923", "10002016", 6);
-        Cliente rodrigo = new Cliente("Rodrigo", "032", "(51)985328500",2000);
+        Cliente rodrigo = new Cliente("Rodrigo", "032", "(51)985328500", 2000);
         Endereco endereco = new Endereco(
                 "rua b",
                 120,
@@ -28,14 +28,14 @@ public class Main {
 
         Aluguel aluguel = new Aluguel();
         aluguel.alugarImovel(imovel);
-        aluguel.setarValorAluguel(imovel,2000, LocalDate.of(2021, 12, 6), 12,4421,500);
+        aluguel.setarValorAluguel(imovel, 2000, LocalDate.of(2021, 12, 6), 12, 4421, 500);
 
         //Result
 
-        System.out.println("Corretor: " + anderson.stringBuilder());
-        System.out.println("Cliente: " + rodrigo.stringBuilder());
-        System.out.println("Imovel: " + imovel.stringBuilder());
-        System.out.println("Anuncio: " + anuncio.stringBuilder());
-        System.out.println("Aluguel: " + aluguel.stringBuilder());
+        System.out.println("Corretor: \n" + anderson.stringBuilder());
+        System.out.println("Cliente: \n" + rodrigo.stringBuilder());
+        System.out.println("Imovel: \n" + imovel.stringBuilder());
+        System.out.println("Anuncio: \n" + anuncio.stringBuilder());
+        System.out.println("Aluguel: \n" + aluguel.stringBuilder());
     }
 }

@@ -33,7 +33,7 @@ public class Corretor extends Pessoa {
 
     public String stringBuilder() {
         StringBuilder stringBuilder = new StringBuilder();
-       return stringBuilder
+        return stringBuilder
                 .append("Nome: ")
                 .append(this.nome)
                 .append("\n")
