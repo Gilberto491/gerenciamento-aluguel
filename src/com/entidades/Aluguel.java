@@ -1,25 +1,17 @@
 package com.entidades;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Aluguel {
 
     double valorAcertado;
-    int vencimento;
-    Date validadeContrato;
+    int dataVencimento;
+    Imovel imovel;
+    LocalDate validadeContrato;
     int numeroContrato;
     double pagamentosMensais;
 
-    public Aluguel(double valorAcertado,
-                   int vencimento,
-                   Date validadeContrato,
-                   int numeroContrato,
-                   double pagamentosMensais) {
-        this.valorAcertado = valorAcertado;
-        this.vencimento = vencimento;
-        this.validadeContrato = validadeContrato;
-        this.numeroContrato = numeroContrato;
-        this.pagamentosMensais = pagamentosMensais;
+    public Aluguel() {
     }
 
     public double getValorAcertado() {
@@ -31,18 +23,18 @@ public class Aluguel {
     }
 
     public int getVencimento() {
-        return vencimento;
+        return dataVencimento;
     }
 
     public void setVencimento(int vencimento) {
-        this.vencimento = vencimento;
+        this.dataVencimento = vencimento;
     }
 
-    public Date getValidadeContrato() {
+    public LocalDate getValidadeContrato() {
         return validadeContrato;
     }
 
-    public void setValidadeContrato(Date validadeContrato) {
+    public void setValidadeContrato(LocalDate validadeContrato) {
         this.validadeContrato = validadeContrato;
     }
 
@@ -61,4 +53,56 @@ public class Aluguel {
     public void setPagamentosMensais(double pagamentosMensais) {
         this.pagamentosMensais = pagamentosMensais;
     }
+
+    public int getDataVencimento() {
+        return dataVencimento;
+    }
+
+    public void setDataVencimento(int dataVencimento) {
+        this.dataVencimento = dataVencimento;
+    }
+
+    public Imovel getImovel() {
+        return imovel;
+    }
+
+    public void setImovel(Imovel imovel) {
+        this.imovel = imovel;
+    }
+
+    public void alugarImovel(Imovel imovel) {
+        imovel.setStatus(true);
+    }
+
+    public void setarValorAluguel(Imovel imovel, double valorAluguel, LocalDate validadeContrato, int dataVencimento, int numeroContrato, double pagamentosMensais) {
+        if (imovel.isStatus()) {
+            imovel.setValorAluguel(valorAluguel);
+            setValidadeContrato(validadeContrato);
+            setDataVencimento(dataVencimento);
+            setNumeroContrato(numeroContrato);
+            setPagamentosMensais(pagamentosMensais);
+        } else {
+            System.out.println("imovel desocupado");
+        }
+    }
+
+    public String stringBuilder() {
+        StringBuilder stringBuilder = new StringBuilder();
+        return stringBuilder
+                .append("Número contrato: ")
+                .append(this.numeroContrato)
+                .append("\n")
+                .append("Validade contrato: ")
+                .append(this.validadeContrato)
+                .append("\n")
+                .append("Data vencimento: ")
+                .append(this.dataVencimento)
+                .append("\n")
+                .append("Pagementos Mensais: ")
+                .append(this.pagamentosMensais)
+                .append("\n")
+                .toString();
+    }
+
+
 }

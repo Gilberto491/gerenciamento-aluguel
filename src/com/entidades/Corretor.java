@@ -30,4 +30,25 @@ public class Corretor extends Pessoa {
     public void setTaxaCorretagem(double taxaCorretagem) {
         this.taxaCorretagem = taxaCorretagem;
     }
+
+    public String stringBuilder() {
+        StringBuilder stringBuilder = new StringBuilder();
+       return stringBuilder
+                .append("Nome: ")
+                .append(this.nome)
+                .append("\n")
+                .append("Registro: ")
+                .append(this.registro)
+                .append("\n")
+                .append("Telefone: ")
+                .append(this.telefone)
+                .append("\n")
+                .append("Creci: ")
+                .append(this.creci)
+                .append("\n")
+                .append("Taxa corretagem")
+                .append(this.taxaCorretagem)
+                .append("\n")
+                .toString();
+    }
 }

@@ -54,4 +54,16 @@ public class Anuncio {
     public void setData(LocalDate data) {
         this.data = data;
     }
+
+    public String stringBuilder() {
+        StringBuilder stringBuider = new StringBuilder();
+        return stringBuider
+                .append("Valor anuncio: ")
+                .append(this.valor)
+                .append("\n")
+                .append("Data anuncio: ")
+                .append(this.data)
+                .append("\n")
+                .toString();
+    }
 }

@@ -70,4 +70,28 @@ public class Endereco {
     public void setCep(String cep) {
         this.cep = cep;
     }
+
+    public String stringBulder() {
+        StringBuilder stringBuilder = new StringBuilder();
+        return stringBuilder
+                .append("Logradouro: ")
+                .append(this.logradouro)
+                .append("\n")
+                .append("Numero: ")
+                .append(this.numero)
+                .append("\n")
+                .append("Complemento: ")
+                .append(this.complemento)
+                .append("\n")
+                .append("Bairro: ")
+                .append(this.bairro)
+                .append("\n")
+                .append("Cidade: ")
+                .append(this.cidade)
+                .append("\n")
+                .append("Cep: ")
+                .append(this.cep)
+                .append("\n")
+                .toString();
+    }
 }
